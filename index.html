@@ -7,39 +7,65 @@
     <meta http-equiv = "X-UA-Compatible" content = "ie=edge">
     <title>Color game</title>
     <link rel = "stylesheet" href = "css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800|Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-
 </head>
 <body>
-    <div class="field-size">
-            <select name = "width" id = "width">
-                <option disabled >Width squares</option>
-                <option value = "2">2</option>
-                <option value = "3">3</option>
-                <option value = "4">4</option>
-                <option value = "5">5</option>
-                <option value = "6">6</option>
-                <option value = "7">7</option>
-                <option value = "8">8</option>
-                <option value = "9">9</option>
-                <option value = "10">10</option>
-            </select>
-            <select name = "height" id = "height">
-                <option disabled >Height squares</option>
-                <option value = "2">2</option>
-                <option value = "3">3</option>
-                <option value = "4">4</option>
-                <option value = "5">5</option>
-                <option value = "6">6</option>
-                <option value = "7">7</option>
-                <option value = "8">8</option>
-                <option value = "9">9</option>
-                <option value = "10">10</option>
-            </select>
-            <button id="set_size_btn">Set Size</button>
-            <button id="start_btn">Start</button>
+    <div class="container">
+        <div id="top-move"></div>
+        <div class="description">
+            <h2>The Game</h2>
+            <p>The rules can't be easier. After setting the field and pushing the Start button blocks will randomly
+                colored
+            red. Your task is to color blocks green. In case on all blocks are red - you lose, otherwise all blocks
+            are green - you win. Good luck!</p>
+            <button id="open-settings">Let's starts</button>
+        </div>
+        <div class="field-settings" id="field-settings">
+            <div class="select" id="select-width">
+                <label for = "width">Select the width of the field</label>
+                <select name = "width" id = "width">
+                    <option disabled selected>Field width</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                    <option value = "6">6</option>s
+                    <option value = "7">7</option>
+                    <option value = "8">8</option>
+                    <option value = "9">9</option>
+                    <option value = "10">10</option>
+                </select>
+            </div>
+            <div class="select" id="select-height">
+                <label for = "height">Select the height of the field</label>
+                <select name = "height" id = "height">
+                    <option disabled selected>Field height</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                    <option value = "6">6</option>
+                    <option value = "7">7</option>
+                    <option value = "8">8</option>
+                    <option value = "9">9</option>
+                    <option value = "10">10</option>
+                </select>
+            </div>
+            <div class="select" id="select-set-size">
+                <button id="set_size_btn">Set Size</button>
+            </div>
+            <div class="select" id="select-start">
+                <button id="start_btn">Start</button>
+            </div>
+        </div>
+        <div id="field-container">
+            <div id="field"></div>
+        </div>
     </div>
-    <div id="field"></div>
+    <div id="popup">
+        <div></div>
+    </div>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
